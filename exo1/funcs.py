@@ -5,4 +5,7 @@ def get_mean(tab_int=[]):
 	return tab_sum//len(tab_int)
 
 def min_int(a,b):
-	return -1
+	if a<b:
+		return a
+	else:
+		return b
