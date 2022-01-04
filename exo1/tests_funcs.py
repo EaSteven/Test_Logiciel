@@ -9,6 +9,12 @@ class TestFuncs(unittest.TestCase):
 		self.assertEqual(funcs.get_mean([-1,-1,-1,-1]),-1)
 		self.assertEqual(funcs.get_mean([-1,-2,1,2]),0)
 		self.assertEqual(funcs.get_mean([2.5,2.5,2.5,2.5]),2)
-		
+	
+	def test_min_int(self):
+		self.assertEqual(funcs.get_mean(0,0),0)
+		self.assertEqual(funcs.get_mean(-1,0),-1)
+		self.assertEqual(funcs.get_mean(0,10),0)
+		self.assertEqual(funcs.get_mean(-1,-2),-2)
+
 if __name__ == '__main__':
 	unittest.main()
