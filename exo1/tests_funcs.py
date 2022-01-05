@@ -16,5 +16,12 @@ class TestFuncs(unittest.TestCase):
 		self.assertEqual(funcs.min_int(0,10),0)
 		self.assertEqual(funcs.min_int(-1,-2),-2)
 
+	def test_get_mediane(self):
+		self.assertEqual(funcs.get_mediane([-1,-5,7,10,12]),7)
+		self.assertEqual(funcs.get_mediane([10,1,4,7,8]),7)
+		self.assertEqual(funcs.get_mediane([-1,5,6,8]),5.5)
+		self.assertEqual(funcs.get_mediane([1,5,4,3,8,9,1,2]),3.5)
+
+
 if __name__ == '__main__':
 	unittest.main()

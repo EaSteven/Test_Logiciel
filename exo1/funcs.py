@@ -9,3 +9,6 @@ def min_int(a,b):
 		return a
 	else:
 		return b
+
+def get_mediane(tab_int):
+	return -1
