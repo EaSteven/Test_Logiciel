@@ -1,3 +1,4 @@
+import statistics
 def get_mean(tab_int=[]):
 	tab_sum=0
 	for value in tab_int:
@@ -11,4 +12,4 @@ def min_int(a,b):
 		return b
 
 def get_mediane(tab_int):
-	return -1
+	return statistics.median(tab_int)
