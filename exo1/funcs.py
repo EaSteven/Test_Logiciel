@@ -15,4 +15,4 @@ def get_mediane(tab_int):
 	return statistics.median(tab_int)
 
 def get_ecart_type(tab_int):
-	return -1
+	return round(statistics.pstdev(tab_int),2)
