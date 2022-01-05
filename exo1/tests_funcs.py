@@ -28,6 +28,18 @@ class TestFuncs(unittest.TestCase):
 		self.assertEqual(funcs.get_ecart_type([1,3,5,7,9]),2.83)
 		self.assertEqual(funcs.get_ecart_type([0,2,4,6,8,10]),3.42)
 
+	def test_is_Arithm(self):	
+		self.assertEqual(funcs.is_Arithm([1,1,1]),True)
+		self.assertEqual(funcs.is_Arithm([-1,0,1,2,3]),True)
+		self.assertEqual(funcs.is_Arithm([1,2,3,5,6]),False)
+		self.assertEqual(funcs.is_Arithm([10,20,30,40,50]),True)
+
+	def test_is_Géo(self):
+		self.assertEqual(funcs.is_Géo([1,1,1,1]),True)
+		self.assertEqual(funcs.is_Géo([2,4,8,16,32]),True)
+		self.assertEqual(funcs.is_Géo([-2,-4,-8,-16,-32]),True)
+		self.assertEqual(funcs.is_Géo([3,6,12,15]),False)
+
 
 if __name__ == '__main__':
 	unittest.main()

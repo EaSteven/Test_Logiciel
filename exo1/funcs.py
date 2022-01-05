@@ -16,3 +16,9 @@ def get_mediane(tab_int):
 
 def get_ecart_type(tab_int):
 	return round(statistics.pstdev(tab_int),2)
+
+def is_Arithm(tab_int):
+	return -1
+
+def is_Géo(tab_int):
+	return -1
