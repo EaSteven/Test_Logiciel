@@ -30,3 +30,9 @@ def is_Géo(tab_int):
 		if (tab_int[i+1]/tab_int[i] != raison):
 			return False
 	return True
+
+def suite_Arithm(tab_int,n):
+	return -1
+
+def suite_Géo(tab_int,n):
+	return -1

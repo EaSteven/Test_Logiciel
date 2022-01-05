@@ -40,6 +40,17 @@ class TestFuncs(unittest.TestCase):
 		self.assertEqual(funcs.is_Géo([-2,-4,-8,-16,-32]),True)
 		self.assertEqual(funcs.is_Géo([3,6,12,15]),False)
 
+	def test_suite_Arithm(self):	
+		self.assertEqual(funcs.suite_Arithm([1,1,1],2),(True,[1,1]))
+		self.assertEqual(funcs.suite_Arithm([-1,0,1,2,3],4),(True,[4,5,6,7]))
+		self.assertEqual(funcs.suite_Arithm([1,2,3,5,6],0),(False,[None]))
+		self.assertEqual(funcs.suite_Arithm([10,20,30,40,50],0),(True,[None]))
 
+	def test_suite_Géo(self):
+		self.assertEqual(funcs.suite_Géo([1,1,1,1],1),(True,[1]))
+		self.assertEqual(funcs.suite_Géo([2,4,8,16,32],-1),(True,[None]))
+		self.assertEqual(funcs.suite_Géo([-2,-4,-8,-16,-32],2),(True,[-64,-128]))
+		self.assertEqual(funcs.suite_Géo([3,6,12,15],5),(False,[None]))
+	
 if __name__ == '__main__':
 	unittest.main()
