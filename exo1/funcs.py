@@ -18,7 +18,15 @@ def get_ecart_type(tab_int):
 	return round(statistics.pstdev(tab_int),2)
 
 def is_Arithm(tab_int):
-	return -1
+	raison = tab_int[1]-tab_int[0]
+	for i in range (len(tab_int)-1):
+		if (tab_int[i+1]-tab_int[i] != raison):
+			return False
+	return True		
 
 def is_Géo(tab_int):
-	return -1
+	raison = tab_int[1]/tab_int[0]
+	for i in range (len(tab_int)-1):
+		if (tab_int[i+1]/tab_int[i] != raison):
+			return False
+	return True
