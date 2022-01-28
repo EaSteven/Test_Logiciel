@@ -32,3 +32,6 @@ def derivee(float_list):
 	for i in range (len(float_list)-1):
 		float_list_derivee.append(float_list[i+1] - float_list[i])
 	return float_list_derivee
+
+def derivee_seconde(float_list):
+	return -1
