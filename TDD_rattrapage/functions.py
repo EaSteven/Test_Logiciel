@@ -26,4 +26,9 @@ def mirror(str_input,nb):
 #f'= [f(n+1) - f(n)]/h
 #on fix l'interval h = 1
 def derivee(float_list):
-	return -1
+	if len(float_list) <= 1:
+		return -1
+	float_list_derivee = []
+	for i in range (len(float_list)-1):
+		float_list_derivee.append(float_list[i+1] - float_list[i])
+	return float_list_derivee
