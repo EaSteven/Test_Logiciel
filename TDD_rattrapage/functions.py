@@ -34,4 +34,8 @@ def derivee(float_list):
 	return float_list_derivee
 
 def derivee_seconde(float_list):
-	return -1
+	float_list_derivee = derivee(float_list)
+	if float_list_derivee == -1:
+		return -1
+	float_list_derivee_seconde = (derivee(float_list_derivee))
+	return float_list_derivee_seconde

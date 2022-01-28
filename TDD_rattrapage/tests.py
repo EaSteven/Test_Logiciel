@@ -29,7 +29,7 @@ class Test(unittest.TestCase):
 		self.assertEqual(functions.derivee([5]),-1)
 		
 	
-	def test_derivee(self):
+	def test_derivee_seconde(self):
 		self.assertEqual(functions.derivee_seconde([1,3,7,10,20]),[2,-1,7])
 		self.assertEqual(functions.derivee_seconde([1,1,1,1]),[0,0])
 		self.assertEqual(functions.derivee_seconde([-1,5,8,-2]),[-3,-13])
