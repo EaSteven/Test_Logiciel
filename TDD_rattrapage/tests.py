@@ -50,5 +50,31 @@ class Test(unittest.TestCase):
 		self.assertEqual(functions.derivee([5,4,3,2],-1),-1)
 		
 
+	def test_approx_derivee(self):
+
+		#Test sinus
+		self.assertEqual(functions.approx_derivee(lambda x : math.sin(x),math.pi/2,2),0)
+		
+		#Test fonction affine
+		self.assertEqual(functions.approx_derivee(lambda x :2*x,5,1),2)
+		self.assertEqual(functions.approx_derivee(lambda x :2*x + 5,5,1),2)
+		
+		#Test constante
+		self.assertEqual(functions.approx_derivee(lambda x :1,10,2),0)
+
+		#Test exponentielle
+		self.assertEqual(functions.approx_derivee(lambda x :math.exp(x),1,2),2.72)
+
+		#Test racine
+		self.assertEqual(functions.approx_derivee(lambda x :math.sqrt(x),2,1),0.4)		
+		#impossible au point 0
+		self.assertEqual(functions.approx_derivee(lambda x :math.sqrt(x),0,1),False)		
+		
+		#Test quotient
+		self.assertEqual(functions.approx_derivee(lambda x :1/x,4,2),-0.06)
+		#impossible au point 0
+		self.assertEqual(functions.approx_derivee(lambda x :1/x,0,2),False)
+
+
 if __name__ == '__main__':
 	unittest.main()

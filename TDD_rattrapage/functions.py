@@ -1,4 +1,5 @@
 import math
+import sympy
 
 def mirror(str_input,nb):
 	# check if nb is a integer
@@ -37,9 +38,11 @@ def derivee(float_list,h):
 	return float_list_derivee
 
 def derivee_seconde(float_list,h):
-	float_list_derivee = derivee(float_list,h)
+		float_list_derivee = derivee(float_list,h)
 	if float_list_derivee == -1:
 		return -1
 	float_list_derivee_seconde = (derivee(float_list_derivee,h))
 	return float_list_derivee_seconde
 
+def approx_derivee(fonction,point,ordre_de_grandeur): 
+	return -1
