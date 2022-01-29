@@ -1,3 +1,4 @@
+import math
 
 def mirror(str_input,nb):
 	# check if nb is a integer
@@ -24,18 +25,21 @@ def mirror(str_input,nb):
 
 
 #f'= [f(n+1) - f(n)]/h
-#on fix l'interval h = 1
-def derivee(float_list):
+def derivee(float_list,h):
 	if len(float_list) <= 1:
 		return -1
+	if h <= 0:
+		return -1
+
 	float_list_derivee = []
 	for i in range (len(float_list)-1):
-		float_list_derivee.append(float_list[i+1] - float_list[i])
+		float_list_derivee.append((float_list[i+1] - float_list[i])/h)
 	return float_list_derivee
 
-def derivee_seconde(float_list):
-	float_list_derivee = derivee(float_list)
+def derivee_seconde(float_list,h):
+	float_list_derivee = derivee(float_list,h)
 	if float_list_derivee == -1:
 		return -1
-	float_list_derivee_seconde = (derivee(float_list_derivee))
+	float_list_derivee_seconde = (derivee(float_list_derivee,h))
 	return float_list_derivee_seconde
+
